@@ -1,0 +1,23 @@
+.card-container{
+    padding: 1rem;
+    width: 250px;
+
+}
+.card-content{
+    background-color: white;
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+}
+img{
+    height: 80px;
+    max-width: 100%;
+}
+.card-info {
+    color: white;
+    background-color: black;
+    text-align: left;
+    padding: 1rem;
+  }

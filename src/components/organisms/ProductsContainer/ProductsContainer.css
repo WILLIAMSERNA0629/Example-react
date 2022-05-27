@@ -1,0 +1,14 @@
+.container {
+    background: #eedfcc;
+    min-height: 100vh;
+    
+  }
+  
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px;
+    
+  }
+  
