@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "../../molecules/Card/Card";
 import "./ProductsContainer.css"
 
 
-const ProductsContainer = () => {
- 
+const ProductsContainer = (e) => {
+   
         const productosInfo = [
+
           {
             id: 1,
             img: "https://placeimg.com/300/100",
-            name: "Nombre 1",
+            name: "zapatos",
             description: `Descripción producto 1`,
             price: 299,
             category: "Descuentos",
@@ -17,28 +18,28 @@ const ProductsContainer = () => {
           {
             id: 2,
             img: "https://placeimg.com/200/100",
-            name: "Nombre 2",
+            name: "mujer",
             description: `Descripción producto 2`,
             price: 399,
           },
           {
             id: 3,
             img: "https://placeimg.com/400/100",
-            name: "Nombre 3",
+            name: "mascotas",
             description: `Descripción producto 3`,
             price: 499,
           },
           {
             id: 4,
             img: "https://placeimg.com/500/100",
-            name: "Nombre 4",
+            name: "hombre",
             description: `Descripción producto 4`,
             price: 599,
           },
           {
             id: 5,
             img: "https://placeimg.com/600/100",
-            name: "Nombre 5",
+            name: "bebes",
             description: `Descripción producto 5`,
             price: 699,
           },
@@ -91,11 +92,27 @@ const ProductsContainer = () => {
             description: `Descripción producto 12`,
             price: 1399,
           },
+       
+       
+       
         ];
+        const [inputValue, setInputValue] = useState("");
+         
+        const handleChange = (e) => {
+            setInputValue(e.target.value)
+          }
+          const filterProducts =() =>{
+             const products = productosInfo.filter((producto)=>{                   
+                  return producto.name.toLowerCase().includes(inputValue.toLowerCase());
+              })
+              return products 
+          }        
+        
     return (
         <div className="container">
+            <input className="input"onChange={(e)=>handleChange(e)}/>
             <div className="content">
-                {productosInfo.map((product)=> (
+                {filterProducts().map((product)=> (
                     <Card
                     key={product.id}
                     name={product.name}

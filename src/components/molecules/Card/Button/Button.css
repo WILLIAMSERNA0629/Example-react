@@ -1,0 +1,15 @@
+.container__button{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .plus {
+    border: 1px solid red; 
+    border-radius: 50%;
+    background-color: red;
+    color:white;
+  }
+  
