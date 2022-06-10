@@ -14,6 +14,7 @@ const Navbar = () =>{
         <Toolbar>
           <Link to='/' className='links'>Home</Link>
           <Link to='/store'className='links'>Store</Link>
+          <Link to='/contact'className='links'>Contact Us</Link>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
            Tienda
           </Typography>

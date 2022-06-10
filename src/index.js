@@ -5,6 +5,7 @@ import App from './components/pages/App.jsx';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Store from './components/pages/Store/Store';
+import Contact from './components/pages/Contact/Contact'
 import Navbar from './components/organisms/Navbar/Navbar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -15,6 +16,7 @@ root.render(
       <Routes>
         <Route path='/' element={<App/>} />
         <Route path='/store' element={<Store/>} />
+        <Route path='/contact' element={<Contact/>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
