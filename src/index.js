@@ -5,13 +5,13 @@ import App from './components/pages/App.jsx';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Store from './components/pages/Store/Store';
-// import Navbar from './components/organisms/ProductsContainer/Navbar/Navbar';
+import Navbar from './components/organisms/Navbar/Navbar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    {/* <Navbar/> */}
+  <React.StrictMode>   
     <BrowserRouter>
+     <Navbar/>
       <Routes>
         <Route path='/' element={<App/>} />
         <Route path='/store' element={<Store/>} />
